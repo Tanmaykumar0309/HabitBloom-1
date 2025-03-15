@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HabitBloom | Your Mental Wellness Companion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            padding: 20px 8%; /* Reduced padding */
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .logo img {
+            width: 100px; /* Reduced width */
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #00796b;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #09893a;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right,#008172, #007f5f);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom: 5px solid #fff;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .cta-btn {
+            background-color: #fff;
+            color: #007f5f;
+            padding: 15px 40px;
+            font-size: 1.3em;
+            font-weight: bold;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #007f5f;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* Mental Health Section */
+        .mental-health {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .mental-health h2 {
+            font-size: 2.8em;
+            color: #007f5f;
+            margin-bottom: 20px;
+        }
+
+        .mental-health p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Therapists Section */
+        .therapists {
+            background-color: #def5eb;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .therapists h2 {
+            font-size: 2.8em;
+            color: #007f5f;
+            margin-bottom: 20px;
+        }
+
+        .therapist-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .therapist-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .therapist-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .therapist-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .therapist-card h3 {
+            margin: 10px 0;
+            color: #007f5f;
+        }
+
+        .therapist-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .therapist-card a {
+            color: #007f5f;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #007f5f;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        footer img {
+            width: 150px;
+            margin-top: 10px;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8em;
+            }
+
+            .cta-btn {
+                padding: 12px 30px;
+                font-size: 1.1em;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            nav ul li {
+                margin-bottom: 15px;
+            }
+
+            .mental-health p {
+                font-size: 1em;
+            }
+
+            .therapist-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="HabitBloom Logo" height="80" width="80"> <!-- Reduced size -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#mental-health">Mental health</a></li>
+                <li><a href="chatbot.html">Test</a></li>
+                <li><a href="#therapists">Therapist</a></li>
+                <li><a href="expert-studies.html">Expert Studies</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Your AI Companion for Mental Wellness</h1>
+        <p>Begin your journey to better mental health with personalized support and guidance, available 24/7.</p>
+        <button class="cta-btn" onclick="window.location.href='chatbot.html'">Get Started</button>
+    </section>
+
+    <!-- Mental Health Section -->
+    <section id="mental-health" class="mental-health">
+        <h2>The Science Behind AI & Mental Health</h2>
+        <p>
+            AI is revolutionizing mental health support by offering accurate, data-driven insights. Studies show that AI models can diagnose depression with up to 85% accuracy, compared to 76% for human therapists (Nature Digital Medicine, 2023). Unlike traditional methods, AI continuously learns from vast amounts of data, identifying patterns that even experienced professionals might miss. With mental health conditions often being underdiagnosed or misdiagnosed, AI helps bridge the gap by offering a more objective and consistent evaluation.        </p>
+        <h2>Understanding Mental Health</h2>
+        <p>
+            Mental health is an essential aspect of our overall well-being. It affects how we think, feel, and act, and it influences how we handle stress, relate to others, and make decisions. Maintaining good mental health is crucial for leading a fulfilling life, and at HabitBloom, we offer personalized tools and resources to help you cultivate a healthier mind.
+        </p>
+        <h2>Mental Health Statistics & The Need for AI Support</h2>
+        <p>
+            The world is facing a mental health crisis, with over 280 million people suffering from depression (WHO, 2023). Despite this, nearly 70% of those affected never receive professional help, often due to cost, stigma, or lack of availability. With only 1 mental health professional for every 10,000 people in many countries, the demand far exceeds the supply. AI can make mental health support accessible to millions, offering instant, non-judgmental, and cost-effective assistance.        </p>
+        <h2>How HabitBloom Works – Step-by-Step Guide</h2>
+        <p>
+            HabitBloom makes mental well-being easier to manage by guiding users through a structured process. First, our AI-powered system asks personalized questions to understand the user’s emotions, mood swings, and stressors. Based on this data, it generates insightful reports about their mental state, highlighting potential concerns. Next, the AI suggests customized habits designed to improve well-being, such as mindfulness exercises, better sleep routines, or social engagement tips. The platform adapts over time, modifying habits based on user feedback, making mental health improvement personalized and sustainable.        </p>
+    </section>
+
+    <!-- Therapists Section -->
+    <section id="therapists" class="therapists">
+        <h2>Meet Our Expert Therapists</h2>
+        <div class="therapist-list">
+            <div class="therapist-card">
+                <img src="images/therapist1.jpg" alt="Therapist 1">
+                <h3>Dr. Emma Watson</h3>
+                <p>Specialist in Anxiety & Depression</p>
+                <p>Dr. Watson uses cognitive behavioral therapy (CBT) to help clients overcome anxiety, depression, and other emotional challenges.</p>
+                <a href="#">Book a Session</a>
+            </div>
+            <div class="therapist-card">
+                <img src="images/therapist2.jpg" alt="Therapist 2">
+                <h3>Dr. John Doe</h3>
+                <p>Specialist in Relationship Counseling</p>
+                <p>Dr. Doe works with individuals and couples to strengthen relationships and foster healthy communication.</p>
+                <a href="#">Book a Session</a>
+            </div>
+            <div class="therapist-card">
+                <img src="images/therapist3.jpg" alt="Therapist 3">
+                <h3>Dr. Sarah Lee</h3>
+                <p>Specialist in PTSD & Trauma</p>
+                <p>Dr. Lee offers therapeutic services for individuals struggling with PTSD, trauma, and other stress-related disorders.</p>
+                <a href="#">Book a Session</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 HabitBloom. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
